@@ -1,3 +1,5 @@
+import 'package:allnewcashflow/json/Wallet_json.dart';
+import 'package:allnewcashflow/json/day_month.dart';
 import 'package:allnewcashflow/models/models.dart';
 import 'package:allnewcashflow/services/services.dart';
 import 'package:allnewcashflow/theme/colors.dart';
@@ -10,3 +12,5 @@ import 'package:fluttertoast/fluttertoast.dart';
 part 'login.dart';
 part 'mainmenu.dart';
 part 'register.dart';
+part 'wallet.dart';
+part 'profile.dart';
