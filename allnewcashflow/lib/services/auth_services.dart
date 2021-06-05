@@ -56,4 +56,19 @@ class AuthServices {
 
     return msg;
   }
+
+  static Future<bool> signOut() async {
+    await Firebase.initializeApp();
+    String dateNow = AcitivityServices.dateNow();
+    String uid = auth.currentUser.uid;
+
+    await auth.signOut().whenComplete(() {
+      userCollection.doc(uid).update({
+        'isOn': '0',
+        'updatedAt': dateNow,
+      });
+    });
+
+    return true;
+  }
 }
