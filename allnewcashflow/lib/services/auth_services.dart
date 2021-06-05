@@ -34,4 +34,26 @@ class AuthServices {
     });
     return msg;
   }
+
+  static Future<String> signIn(String email, String password) async {
+    await Firebase.initializeApp();
+    String dateNow = AcitivityServices.dateNow();
+    String uid = "";
+    String msg = "";
+
+    UserCredential userCredential =
+        await auth.signInWithEmailAndPassword(email: email, password: password);
+    uid = userCredential.user.uid;
+
+    await userCollection.doc(uid).update({
+      'isOn': '1',
+      'updatedAt': dateNow,
+    }).then((value) {
+      msg = "success";
+    }).catchError((onError) {
+      msg = onError;
+    });
+
+    return msg;
+  }
 }
