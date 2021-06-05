@@ -28,3 +28,7 @@ class AcitivityServices {
       child: SpinKitFadingCircle(
         size: 50,
         color: Colors.grey,
+      ),
+    );
+  }
+}
