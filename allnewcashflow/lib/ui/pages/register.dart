@@ -124,25 +124,25 @@ class _RegisterState extends State<Register> {
                       SizedBox(height: 20),
                       ElevatedButton.icon(
                           onPressed: () async {
-                            // if (_formKey.currentState.validate()) {
-                            //   Users users = new Users(
-                            //       "",
-                            //       ctrlName.text,
-                            //       ctrlPhone.text,
-                            //       ctrlEmail.text,
-                            //       ctrlPass.text,
-                            //       "",
-                            //       "");
-                            //   String msg = await AuthServices.signUp(users);
-                            //   if (msg == "success") {
-                            //     AcitivityServices.showToast(
-                            //         "Register Success", Colors.grey);
-                            //   }
-                            // } else {
-                            //   Fluttertoast.showToast(
-                            //       msg:
-                            //           "Please Check Email and Passowrd Correctly!");
-                            // }
+                            if (_formKey.currentState.validate()) {
+                              Users users = new Users(
+                                  "",
+                                  ctrlName.text,
+                                  ctrlPhone.text,
+                                  ctrlEmail.text,
+                                  ctrlPass.text,
+                                  "",
+                                  "");
+                              String msg = await AuthServices.signUp(users);
+                              if (msg == "success") {
+                                AcitivityServices.showToast(
+                                    "Register Success", Colors.grey);
+                              }
+                            } else {
+                              Fluttertoast.showToast(
+                                  msg:
+                                      "Please Check Email and Passowrd Correctly!");
+                            }
                           },
                           icon: Icon(Icons.save),
                           label: Text("Register"),
