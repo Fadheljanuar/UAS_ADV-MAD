@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "875316040943",
+    "project_id": "allnewcashflow-9c91c",
+    "storage_bucket": "allnewcashflow-9c91c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:875316040943:android:d28941439bf69f8447b71a",
+        "android_client_info": {
+          "package_name": "com.example.allnewcashflow"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "875316040943-rkdn1cef2jaeu6a4846hrum0d7hn0e43.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTMSPS6-TCcE8fG3fKJ709_N17eVF4TEY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "875316040943-rkdn1cef2jaeu6a4846hrum0d7hn0e43.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
