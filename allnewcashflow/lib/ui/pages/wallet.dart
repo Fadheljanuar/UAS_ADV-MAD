@@ -110,21 +110,6 @@ class _WalletPageState extends State<WalletPage> {
                         width: (size.width - 40) * 0.7,
                         child: Row(
                           children: [
-                            Container(
-                              width: 50,
-                              height: 50,
-                              decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                color: grey.withOpacity(0.1),
-                              ),
-                              child: Center(
-                                child: Image.asset(
-                                  wallet[index]['icon'],
-                                  width: 30,
-                                  height: 30,
-                                ),
-                              ),
-                            ),
                             SizedBox(width: 15),
                             Container(
                               width: (size.width - 90) * 0.5,
@@ -165,7 +150,7 @@ class _WalletPageState extends State<WalletPage> {
                               style: TextStyle(
                                   fontWeight: FontWeight.w600,
                                   fontSize: 15,
-                                  color: Colors.green),
+                                  color: Colors.red),
                             ),
                           ],
                         ),

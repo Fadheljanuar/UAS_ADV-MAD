@@ -7,11 +7,3 @@ List days = [
   {"label": "Thu", "day": "10"},
   {"label": "Fri", "day": "11"},
 ];
-List months = [
-  {"label": "2021", "day": "Jun"},
-  {"label": "2021", "day": "Jul"},
-  {"label": "2021", "day": "Aug"},
-  {"label": "2021", "day": "Sep"},
-  {"label": "2021", "day": "Oct"},
-  {"label": "2021", "day": "Nov"},
-];

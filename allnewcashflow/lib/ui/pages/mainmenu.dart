@@ -10,13 +10,10 @@ class _MainMenuState extends State<MainMenu> {
   int pageIndex = 0;
   bool isLoading = false;
   String msg = "Fail";
-  List<Widget> pages = [
-    WalletPage(),
-  ];
+  List<Widget> pages = [WalletPage(), OutcomePage()];
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
   }
 
@@ -32,7 +29,7 @@ class _MainMenuState extends State<MainMenu> {
         bottomNavigationBar: getFooter(),
         floatingActionButton: FloatingActionButton(
           onPressed: () {
-            selectedTab(4);
+            selectedTab(2);
           },
           child: Icon(
             Icons.add,
@@ -46,10 +43,13 @@ class _MainMenuState extends State<MainMenu> {
   }
 
   Widget getBody() {
-    return IndexedStack(
-      index: pageIndex,
-      children: pages,
-    );
+    return IndexedStack(index: pageIndex, children: [
+      WalletPage(),
+      Center(
+        child: Text("ProfilePage"),
+      ),
+      OutcomePage()
+    ]);
   }
 
   Widget getFooter() {
