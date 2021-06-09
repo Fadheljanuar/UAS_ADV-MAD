@@ -43,13 +43,9 @@ class _MainMenuState extends State<MainMenu> {
   }
 
   Widget getBody() {
-    return IndexedStack(index: pageIndex, children: [
-      WalletPage(),
-      Center(
-        child: Text("ProfilePage"),
-      ),
-      OutcomePage()
-    ]);
+    return IndexedStack(
+        index: pageIndex,
+        children: [WalletPage(), ProfilePage(), OutcomePage()]);
   }
 
   Widget getFooter() {

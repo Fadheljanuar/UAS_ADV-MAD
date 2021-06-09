@@ -10,6 +10,9 @@ class _WalletPageState extends State<WalletPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text('Wallet'),
+      ),
       backgroundColor: grey.withOpacity(0.05),
       body: getBody(),
     );
@@ -26,7 +29,6 @@ class _WalletPageState extends State<WalletPage> {
                 color: grey.withOpacity(0.01),
                 spreadRadius: 10,
                 blurRadius: 3,
-                // changes position of shadow
               ),
             ]),
             child: Padding(
@@ -34,19 +36,6 @@ class _WalletPageState extends State<WalletPage> {
                   top: 30, right: 20, left: 20, bottom: 25),
               child: Column(
                 children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        "Your Wallet",
-                        style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold,
-                            color: black),
-                      )
-                    ],
-                  ),
-                  SizedBox(height: 25),
                   Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: List.generate(days.length, (index) {
@@ -110,7 +99,7 @@ class _WalletPageState extends State<WalletPage> {
                         width: (size.width - 40) * 0.7,
                         child: Row(
                           children: [
-                            SizedBox(width: 15),
+                            SizedBox(width: 5),
                             Container(
                               width: (size.width - 90) * 0.5,
                               child: Column(
@@ -158,7 +147,7 @@ class _WalletPageState extends State<WalletPage> {
                     ],
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(left: 65, top: 8),
+                    padding: const EdgeInsets.only(left: 5, top: 8),
                     child: Divider(
                       thickness: 0.8,
                     ),

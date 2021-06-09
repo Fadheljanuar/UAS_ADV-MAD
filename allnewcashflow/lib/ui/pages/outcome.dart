@@ -14,6 +14,9 @@ class _OutcomePageState extends State<OutcomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: grey.withOpacity(0.05),
+      appBar: AppBar(
+        title: Text('Expense'),
+      ),
       body: getBody(),
     );
   }
@@ -24,38 +27,8 @@ class _OutcomePageState extends State<OutcomePage> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Container(
-            decoration: BoxDecoration(color: white, boxShadow: [
-              BoxShadow(
-                color: grey.withOpacity(0.01),
-                spreadRadius: 10,
-                blurRadius: 3,
-                // changes position of shadow
-              ),
-            ]),
-            child: Padding(
-              padding: const EdgeInsets.only(
-                  top: 40, right: 20, left: 20, bottom: 25),
-              child: Row(
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        "Outcome",
-                        style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold,
-                            color: black),
-                      )
-                    ],
-                  ),
-                ],
-              ),
-            ),
-          ),
           SizedBox(
-            height: 50,
+            height: 25,
           ),
           Padding(
             padding: const EdgeInsets.only(left: 20, right: 20),
